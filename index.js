@@ -1,3 +1,6 @@
+/* eslint-env node */
+'use strict';
+
 var AnalyticsFilter = require('./lib/AnalyticsFilter');
 
 module.exports = {
