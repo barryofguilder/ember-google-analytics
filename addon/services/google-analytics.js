@@ -1,7 +1,6 @@
 import Ember from 'ember';
-import getOwner from 'ember-getowner-polyfill';
 
-const { computed, get, isEmpty, copy } = Ember;
+const { computed, get, getOwner, isEmpty, copy } = Ember;
 
 export default Ember.Service.extend({
 
