@@ -14,14 +14,14 @@ module.exports = {
     if (!env) {
       return;
     }
-    this.options = baseConfig['ember-google-analytics'] || {};
+    this.hostBuildOptions = baseConfig['ember-google-analytics'] || {};
   },
 
   included: function(app) {
     this._super.included(app);
 
-    if (this.options.trackingId) {
-      app.import(this.options.localStorage ? 'vendor/google-analytics-local-storage.js' : 'vendor/google-analytics.js');
+    if (this.hostBuildOptions.trackingId) {
+      app.import(this.hostBuildOptions.localStorage ? 'vendor/google-analytics-local-storage.js' : 'vendor/google-analytics.js');
     }
   }
 
